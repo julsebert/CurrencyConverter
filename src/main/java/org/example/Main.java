@@ -1,6 +1,12 @@
 package org.example;
 import java.util.Scanner;
 public class Main {
+
+    /**
+     * import java.util.Scanner
+     * Definition sout
+     * @param args
+     */
     public static void main(String[] args) {
         final Scanner scan = new Scanner(System.in);
         System.out.println("Currency to buy: ");
@@ -11,6 +17,12 @@ public class Main {
         System.out.println("2: Chose amount to be converted:");
         System.out.println("Please chose an option (<<x>> to exit): ");
         System.out.println("Please chose an option (<<x>> to exit): ");
+
+
+        /**
+         * @param userInput
+         */
+
         final String userInput = scan.next();
                 System.out.print(userInput);
 
