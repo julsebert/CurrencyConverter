@@ -53,7 +53,7 @@ public class A_Main {
 
     public static void main(String[] args) {
         try {
-            File getCSVFiles = new File("./Projekt SE1/rms_mth3.csv");
+            File getCSVFiles = new File("./Projekt SE1/Tabelle23 final.csv");
             Scanner sc = new Scanner(getCSVFiles);
             sc.useDelimiter(";");
             while (sc.hasNext()) {
