@@ -4,28 +4,58 @@ import java.util.Scanner;
 
 public class ImportFile {
 
-    public void importFile() {
+    public B_Currencys[] importFile() {
+
+        /**
+         * <h1>Import SDR - Werte</h1>
+         * Um die den Betrag leichter in eine andere Währung umzurrechnen arbeiten wir mit dem sog. SDR, kurz für
+         * Sonderziehungsrechte (Special Drawing Rights). Es handelt sich hier nicht um eine eigenständige Währung,
+         * sondern um eine Art Recheneinheit.
+         * In der Methode importFile() wird die externe Datei mit den sdr Daten eingelesen.
+         *
+         */
+
+        B_Currencys[] ArrayCur = new B_Currencys[0];
+
         try {
             File getCSVFiles = new File("./Projekt SE1/Tabelle23 final.csv");
             Scanner sdrData = new Scanner(getCSVFiles);
 
-            int numbersOfCurrencys = 38;
+            int numbersOfCurrencys = 0;
 
-            for (int i = 0; i < numbersOfCurrencys; i++){
+            do {
                 String A = sdrData.nextLine();
-                // Zeile für Zeile einlesen und dann in Arrays speichern
+                numbersOfCurrencys++;
+            } while (sdrData.hasNext());
+
+            ArrayCur = new B_Currencys[numbersOfCurrencys];
+
+            int count = 0;
+
+            for (int i = 0; i < numbersOfCurrencys; i++) {
+
+                String A = sdrData.nextLine();
+
+                int komma = A.indexOf(',');
+
+                B_Currencys newCurrency = new B_Currencys();
+
+                newCurrency.setName(A.substring(0, komma));
+
+                double toDouble = Double.parseDouble(A.substring(komma));
+                newCurrency.setSdr(toDouble);
+
+                ArrayCur[count] = newCurrency;
+                count++;
             }
 
-            /*sc.useDelimiter(";");
-            while (sc.hasNext()) {
-                System.out.print(sc.next() + "|");
-            }
-
-             */
             sdrData.close();
+
         } catch (IOException ioe) {
             System.out.println("This file cannot be reached");
         }
+
+        return ArrayCur;
     }
 
 }

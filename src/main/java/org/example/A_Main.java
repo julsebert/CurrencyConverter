@@ -9,7 +9,7 @@ public class A_Main {
      *
      * @param args
      */
-    /*public static void main(String[] args) {
+        public static void main(String[] args) {
         final Scanner scan = new Scanner(System.in);
         System.out.println("Currency to buy: ");
         System.out.println("Currency to sell: ");
@@ -18,12 +18,12 @@ public class A_Main {
         System.out.println("1: Select currency to sell");
         System.out.println("2: Chose amount to be converted:");
         System.out.println("Please chose an option (<<x>> to exit): ");
-           */
+
 
         /**
          * @param userInput
          */
-         /*
+
         final String userInput = scan.next();
         System.out.print(userInput);
         final C_Interface clear = new C_Interface();
@@ -49,26 +49,12 @@ public class A_Main {
 
 
     }
-        */
-
-    public static void main(String[] args) {
-        try {
-            File getCSVFiles = new File("./Projekt SE1/Tabelle23 final.csv");
-            Scanner sc = new Scanner(getCSVFiles);
-            sc.useDelimiter(";");
-            while (sc.hasNext()) {
-                System.out.print(sc.next() + "|");
-            }
-            sc.close();
-        } catch(IOException ioe) {
-            System.out.println("This file cannot be reached");
-        }
 
 
 
 
 
-    }
+
 }
 
 
