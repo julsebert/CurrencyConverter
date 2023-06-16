@@ -10,6 +10,7 @@ public class Main {
         System.out.println("1: Select currency to sell");
         System.out.println("2: Chose amount to be converted:");
         System.out.println("Please chose an option (<<x>> to exit): ");
+        System.out.println("Please chose an option (<<x>> to exit): ");
         final String userInput = scan.next();
                 System.out.print(userInput);
 
