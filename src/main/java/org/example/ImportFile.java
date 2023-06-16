@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ImportFile {
 
-    public B_Currencys[] importFile() {
+    public static B_Currencys[] importFile() {
 
         /**
          * <h1>Import SDR - Werte</h1>
@@ -27,6 +27,8 @@ public class ImportFile {
                 String A = sdrData.nextLine();
                 numbersOfCurrencys++;
             } while (sdrData.hasNext());
+            // Herausfinden der Anzahl an Währungen
+
 
             ArrayCur = new B_Currencys[numbersOfCurrencys];
 
@@ -39,6 +41,7 @@ public class ImportFile {
                 int komma = A.indexOf(',');
 
                 B_Currencys newCurrency = new B_Currencys();
+                // Erstellung eines neuen Objekts der Klasse B_Currencys
 
                 newCurrency.setName(A.substring(0, komma));
 

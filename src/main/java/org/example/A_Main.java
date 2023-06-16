@@ -10,6 +10,9 @@ public class A_Main {
      * @param args
      */
         public static void main(String[] args) {
+
+        ImportFile.importFile();
+
         final Scanner scan = new Scanner(System.in);
         System.out.println("Currency to buy: ");
         System.out.println("Currency to sell: ");
