@@ -1,23 +1,32 @@
 package org.example;
 import java.io.*;
+import java.util.Scanner;
+
 public class ImportFile {
 
-    public void importFile(){
-            try
-            {
-            //constructor of the File class having file as an argument
-                FileReader fr=new FileReader(".\\SE1\\Projekt SE1\\rms_mth.xls");
-                System.out.println("file content: ");
-                int r=0;
-                while((r=fr.read())!=-1)
-                {
-                    System.out.print((char)r);  //prints the content of the file
-                }
+    public void importFile() {
+        try {
+            File getCSVFiles = new File("./Projekt SE1/Tabelle23 final.csv");
+            Scanner sdrData = new Scanner(getCSVFiles);
+
+            int numbersOfCurrencys = 38;
+
+            for (int i = 0; i < numbersOfCurrencys; i++){
+                String A = sdrData.nextLine();
+                // Zeile für Zeile einlesen und dann in Arrays speichern
             }
-            catch(Exception e)
-            {
-                e.printStackTrace();
+
+            /*sc.useDelimiter(";");
+            while (sc.hasNext()) {
+                System.out.print(sc.next() + "|");
             }
+
+             */
+            sdrData.close();
+        } catch (IOException ioe) {
+            System.out.println("This file cannot be reached");
         }
     }
+
+}
 
