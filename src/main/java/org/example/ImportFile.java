@@ -26,12 +26,14 @@ public class ImportFile {
                 int count = 0;
                 int count2 = 0;
 
+                // Anzahl der Zeilen wird gezählt
                 while (sdrData.hasNext()) {
                     sdrData.nextLine();
+                    //count++;
                     System.out.println(count++);
                 }
+
                 ArrayCur = new B_Currencys[count];
-                System.out.println(ArrayCur.length);
 
                 sdrData = new Scanner(getCSVFiles);
 
@@ -41,30 +43,41 @@ public class ImportFile {
                     String currentLine = sdrData.nextLine();
                     //System.out.println(currentLine);
 
+                    // Trennung zwischen Name und SDR rausfinden
                     int komma = currentLine.indexOf(';');
 
                     B_Currencys newCurrency = new B_Currencys();
-
                     // Erstellung eines neuen Objekts der Klasse B_Currencys
 
                     newCurrency.setName(currentLine.substring(0, komma));
+                    // Name der Währung rausfinden
 
-                    System.out.println(newCurrency.getName());
+                    String doubleWert = currentLine.substring(komma+1);
+                    double zahl;
+                    zahl = Double.parseDouble(doubleWert);
+                    newCurrency.setSdr(zahl);
+
+                    ///System.out.println(newCurrency.getSdr());
+                    // String in einen double-Wert ändern
+
+                    //System.out.println(newCurrency.getName());
 
                     ArrayCur[count2] = newCurrency;
-                    System.out.println("Current currency at index " + count2 + ": " + ArrayCur[count2].getName());
+                    System.out.println("Current currency at index " + count2 + ": " + ArrayCur[count2].getName() + ArrayCur[count2].getSdr());
                     count2++;
 
 
                 }
 
-                for (B_Currencys element : ArrayCur) {
+                /*for (B_Currencys element : ArrayCur) {
                     if (element.containsString("doll")) {
                         System.out.println("YES! Because name is " + element.getName());
                     } else {
                         System.out.println("NO! Because name is " + element.getName());
                     }
                 }
+
+                 */
             }
 
                 sdrData.close();

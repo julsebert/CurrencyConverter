@@ -14,7 +14,8 @@ public class A_Main {
         ImportFile.importFile();
 
         final Scanner scan = new Scanner(System.in);
-        System.out.println("Currency to buy: ");
+
+        System.out.println("Currency to buy: " );
         System.out.println("Currency to sell: ");
         System.out.println("++++++++++++++++++++++");
         System.out.println("0: Select currency to buy");

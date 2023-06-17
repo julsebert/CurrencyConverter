@@ -10,10 +10,6 @@ public class B_Currencys {
         this.name = name;
     }
 
-    public boolean containsString(String s) {
-        return name.contains(s);
-    }
-
     public String getName(){
         return name;
     }
@@ -25,6 +21,10 @@ public class B_Currencys {
 
     public double getSdr() {
         return sdr;
+    }
+
+    public boolean containsString(String s) {
+        return name.contains(s);
     }
 
 }
