@@ -1,6 +1,7 @@
 package org.example;
 import java.util.Scanner;
 import java.io.*;
+
 public class A_Main {
 
     /**
@@ -12,11 +13,12 @@ public class A_Main {
         public static void main(String[] args) {
 
         ImportFile.importFile();
+        CurrencyCalculation status = new CurrencyCalculation();
 
         final Scanner scan = new Scanner(System.in);
 
-        System.out.println("Currency to buy: " );
-        System.out.println("Currency to sell: ");
+        System.out.println("Currency to buy: " + status.getBuy());
+        System.out.println("Currency to sell: " + status.getSell());
         System.out.println("++++++++++++++++++++++");
         System.out.println("0: Select currency to buy");
         System.out.println("1: Select currency to sell");
