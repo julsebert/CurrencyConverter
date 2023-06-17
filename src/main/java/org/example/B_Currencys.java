@@ -10,6 +10,10 @@ public class B_Currencys {
         this.name = name;
     }
 
+    public boolean containsString(String s) {
+        return name.contains(s);
+    }
+
     public String getName(){
         return name;
     }
