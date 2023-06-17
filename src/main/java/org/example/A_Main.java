@@ -85,7 +85,10 @@ public class A_Main {
 
                         Scanner scan3= new Scanner(System.in);
                         System.out.println( "Select a currency by index: ");
-                        final String userInput3 = scan.next();
+                        final int userInput3 = scan.nextInt();
+
+                        status.setBuy(matchUserInput[userInput3]);
+                        System.out.println(status.getBuy());
 
                     } else {                                                        // wenn es mehrere passende Währungen gibt
                         for (B_Currencys element1 : finalCurrency) {
