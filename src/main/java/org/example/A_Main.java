@@ -32,7 +32,7 @@ public class A_Main {
         System.out.print(userInput);
         final C_Interface clear = new C_Interface();
 
-        switch (userInput) {
+        /*switch (userInput) {
             case "0":
                 System.out.println("Enter a currency's name or part of it (>>x<< to exit): ");
                 break;
@@ -50,6 +50,8 @@ public class A_Main {
                 System.out.println("bye");
                 ;
         }
+
+         */
 
 
     }

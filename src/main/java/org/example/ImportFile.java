@@ -5,11 +5,11 @@ import java.util.Scanner;
 
 public class ImportFile {
 
-    public static B_Currencys[] importFile() {
+    public static B_Currencys importFile() {
 
         /**
          * <h1>Import SDR - Werte</h1>
-         * Um die den Betrag leichter in eine andere Währung umzurrechnen arbeiten wir mit dem sog. SDR, kurz für
+         * Um die den Betrag leichter in eine andere Währung um zur rechnen arbeiten wir mit dem sog. SDR, kurz für
          * Sonderziehungsrechte (Special Drawing Rights). Es handelt sich hier nicht um eine eigenständige Währung,
          * sondern um eine Art Recheneinheit.
          * In der Methode importFile() wird die externe Datei mit den sdr Daten eingelesen.
@@ -60,7 +60,7 @@ public class ImportFile {
                     //System.out.println(newCurrency.getName());
 
                     ArrayCur[count2] = newCurrency;
-                    System.out.println("Current currency at index " + count2 + ": " + ArrayCur[count2].getName() + ArrayCur[count2].getSdr());
+                    //System.out.println("Current currency at index " + count2 + ": " + ArrayCur[count2].getName() + ArrayCur[count2].getSdr());
                     count2++;
 
 
