@@ -47,13 +47,46 @@ public class A_Main {
 
                 for (B_Currencys element : finalCurrency) {
 
-                    if (element.containsString(userInputCur1)) {            // Wir schauen, auf wie viele Währungen die Eingabe passt
-                        count++;
-                    }
+                    if (element.containsString(userInputCur1))   count++;         // Wir schauen, auf wie viele Währungen die Eingabe passt
+
+
                 }
+                int count1 = 0;
+                String[] matchUserInput = new String[count];
 
                     if (count > 1) {                                                // Wir erstellen neues Array, um dem
-                        B_Currencys [] matchUserInput = new B_Currencys[count];     // Nutzer die Optionen zu zeigen,
+
+                        for(B_Currencys element1 : finalCurrency) {
+                            if (element1.containsString(userInputCur1)) {                   // Nutzer die Optionen zu zeigen,
+                                matchUserInput[count1] = element1.getName();
+                                count1++;
+                            }
+                        }
+
+                        System.out.println();
+                        System.out.println();
+                        System.out.println();
+
+
+                        System.out.println("Currency to buy: " + status.getBuy());
+                        System.out.println("Currency to sell: " + status.getSell());
+                        System.out.println("++++++++++++++++++++++");
+
+
+
+
+
+                            for (int i = 0; i<matchUserInput.length; i++){
+                                System.out.println(i+ ": " + matchUserInput[i]);
+                            }
+
+
+                        System.out.println();
+
+                        Scanner scan3= new Scanner(System.in);
+                        System.out.println( "Select a currency by index: ");
+                        final String userInput3 = scan.next();
+
                     } else {                                                        // wenn es mehrere passende Währungen gibt
                         for (B_Currencys element1 : finalCurrency) {
 
@@ -63,6 +96,9 @@ public class A_Main {
                             }
 
                     }
+
+
+
                 }
                 break;
                     case "1":
