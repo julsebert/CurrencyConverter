@@ -1,4 +1,5 @@
 package org.example;
+import java.sql.SQLOutput;
 import java.util.Scanner;
 import java.io.*;
 
@@ -11,13 +12,24 @@ public class A_Main {
      * @param args
      */
         public static void main(String[] args) {
+            /*CurrencyCalculation test = new CurrencyCalculation();
+            test.calculationAmount(50);
+            String result2 = String.valueOf(test.calculationAmount(50));
+            System.out.println(result2);
+
+             */
+
+
+
 
         ImportFile.importFile();
         CurrencyCalculation status = new CurrencyCalculation();
         B_Currencys [] finalCurrency = new B_Currencys[ImportFile.importFile().length];
         finalCurrency = ImportFile.importFile();
 
-        while (true){
+        boolean condition = true;
+
+        while (condition){
         final Scanner scan = new Scanner(System.in);
 
         System.out.println("Currency to buy: " + status.getBuy());
@@ -41,7 +53,7 @@ public class A_Main {
                 switch (userInput) {
                     case "0":
                         System.out.println("Enter a currency's name or part of it (>>x<< to exit): ");
-                        final Scanner scan2 = new Scanner(System.in);
+                        final Scanner scan02 = new Scanner(System.in);
                         final String userInputCur1 = scan.next();
 
                         int count = 0;
@@ -116,7 +128,7 @@ public class A_Main {
                         for (B_Currencys element : finalCurrency) {
 
                             if (element.containsString(userInputCur4))
-                                count4++;         // Wir schauen, auf wie viele Währungen die Eingabe passt
+                                count4++;                                               // Wir schauen, auf wie viele Währungen die Eingabe passt
 
 
                         }
@@ -171,15 +183,25 @@ public class A_Main {
                         break;
                     case "2":
                         System.out.println("Enter an amount: ");
-                        final String AMOUNT = scan.next();
+                        final Scanner scan6 = new Scanner(System.in);
+                        final double AMOUNT = scan.nextDouble();
+                        double result = status.calculationAmount(AMOUNT);
+                        System.out.println("Buying " + AMOUNT + " of " + status.getBuy());
+                        System.out.println("Selling " + result + " of " + status.getSell());
+                        System.out.println("++++++++++++++++++++++");
+
                         break;
                     case "x":
                         clear.clearConsole();
+                        condition = false;
+
                         break;
                     default:
-                        System.out.println("bye");
-                        ;
+                        clear.clearConsole();
+                        condition = false;
+
                 }
+
             }
 
 
