@@ -29,15 +29,14 @@ public class ImportFile {
                 // Anzahl der Zeilen wird gezählt
                 while (sdrData.hasNext()) {
                     sdrData.nextLine();
-                    //count++;
-                    System.out.println(count++);
+                    count++;
                 }
 
                 ArrayCur = new B_Currencys[count];
-
                 sdrData = new Scanner(getCSVFiles);
 
-                for (int i = 0; i < count-1; i++) {
+
+                for (int i = 0; i < count; i++) {
 
                    // int komma = sdrData.next().indexOf(";");
                     String currentLine = sdrData.nextLine();
@@ -56,8 +55,6 @@ public class ImportFile {
                     double zahl;
                     zahl = Double.parseDouble(doubleWert);
                     newCurrency.setSdr(zahl);
-
-                    ///System.out.println(newCurrency.getSdr());
                     // String in einen double-Wert ändern
 
                     //System.out.println(newCurrency.getName());
@@ -85,54 +82,6 @@ public class ImportFile {
         } catch (IOException ioe) {
 
         }
-
-       /* try {
-            File getCSVFiles = new File("src/main/resources/Tabelle23final.txt");
-            Scanner sdrData = new Scanner(getCSVFiles);
-
-            int numbersOfCurrencys = 0;
-
-            do {
-                numbersOfCurrencys++;
-            } while (sdrData.hasNextLine());
-            // Herausfinden der Anzahl an Währungen
-
-            System.out.println(numbersOfCurrencys);
-            ArrayCur = new B_Currencys[numbersOfCurrencys];
-
-            int count = 0;
-
-            String currentLine = sdrData.nextLine();
-            for (int i = 0; i < numbersOfCurrencys; i++) {
-                if(sdrData.hasNextLine()) {
-
-                    System.out.println(currentLine);
-                } else {
-                    System.out.println("ERROR");
-                }
-
-              int komma = currentLine.indexOf(';');
-
-                B_Currencys newCurrency = new B_Currencys();
-
-                // Erstellung eines neuen Objekts der Klasse B_Currencys
-
-                newCurrency.setName(currentLine.substring(0, komma));
-                System.out.println(newCurrency.getName());
-                double toDouble = Double.parseDouble(currentLine.substring(komma));
-                newCurrency.setSdr(toDouble);
-                System.out.println(newCurrency.getSdr());
-
-                ArrayCur[count] = newCurrency;
-                count++;
-                System.out.println("Current currency at index " + count + ": " + ArrayCur[count]);
-            }
-
-            sdrData.close();
-
-        } catch (IOException ioe) {
-            System.out.println("This file cannot be reached");
-        }*/
 
         return null;
     }

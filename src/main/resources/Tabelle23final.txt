@@ -9,12 +9,12 @@ Botswana pula;17.736100
 Brazilian real;6.435050
 Brunei dollar;1.793520
 Canadian dollar;1.768650
-Chilean peso;1,068.610000
+Chilean peso;1068.610000
 Czech koruna;29.127300
 Danish krone;9.109960
 Indian rupee;109.793000
 Israeli New Shekel;4.764040
-Korean won;1,716.420000
+Korean won;1716.420000
 Kuwaiti dinar;0.409930
 Malaysian ringgit;6.192030
 Mauritian rupee;61.105300
