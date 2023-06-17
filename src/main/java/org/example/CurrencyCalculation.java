@@ -22,4 +22,9 @@ public class CurrencyCalculation {
     public String getSell(){
         return sell;
     }
+
+
+
+
+
 }

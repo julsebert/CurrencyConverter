@@ -14,6 +14,9 @@ public class A_Main {
 
         ImportFile.importFile();
         CurrencyCalculation status = new CurrencyCalculation();
+        B_Currencys [] finalCurrency = new B_Currencys[ImportFile.importFile().length];
+        finalCurrency = ImportFile.importFile();
+
 
         final Scanner scan = new Scanner(System.in);
 
@@ -34,11 +37,35 @@ public class A_Main {
         System.out.print(userInput);
         final C_Interface clear = new C_Interface();
 
-        /*switch (userInput) {
+        switch (userInput) {
             case "0":
                 System.out.println("Enter a currency's name or part of it (>>x<< to exit): ");
+                final Scanner scan2 = new Scanner(System.in);
+                final String userInputCur1 = scan.next();
+
+                int count = 0;
+
+                for (B_Currencys element : finalCurrency) {
+
+                    if (element.containsString(userInputCur1)) {            // Wir schauen, auf wie viele Währungen die Eingabe passt
+                        count++;
+                    }
+                }
+
+                    if (count > 1) {                                                // Wir erstellen neues Array, um dem
+                        B_Currencys [] matchUserInput = new B_Currencys[count];     // Nutzer die Optionen zu zeigen,
+                    } else {                                                        // wenn es mehrere passende Währungen gibt
+                        for (B_Currencys element1 : finalCurrency) {
+
+                            if (element1.containsString(userInputCur1)) {   // Methode um Currency to Buy festzusetzen,
+                                status.setBuy(element1.getName());          // falls es nur eine passende Währung gibt.
+                                System.out.println(status.getBuy());
+                            }
+
+                    }
+                }
                 break;
-            case "1":
+                    case "1":
                 System.out.println("Enter a currency's name or part of it (>>x<< to exit): ");
                 break;
             case "2":
@@ -53,7 +80,8 @@ public class A_Main {
                 ;
         }
 
-         */
+
+
 
 
     }

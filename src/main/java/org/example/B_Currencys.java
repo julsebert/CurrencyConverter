@@ -23,8 +23,13 @@ public class B_Currencys {
         return sdr;
     }
 
-    public boolean containsString(String s) {
-        return name.contains(s);
+    public boolean containsString(String s) {           // Wir sorgen dafür, dass es egal ist ob die Eigabe des Nutzers
+        String nameUp = name.toUpperCase();             // Groß oder klein geschrieben ist
+        String sUp = s.toUpperCase();
+        return nameUp.contains(sUp);
+
     }
+
+
 
 }

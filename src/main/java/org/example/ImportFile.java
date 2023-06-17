@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class ImportFile {
 
-    public static B_Currencys importFile() {
+    public static B_Currencys [] importFile() {
 
         /**
          * <h1>Import SDR - Werte</h1>
@@ -64,17 +64,13 @@ public class ImportFile {
                     count2++;
 
 
+
                 }
 
-                /*for (B_Currencys element : ArrayCur) {
-                    if (element.containsString("doll")) {
-                        System.out.println("YES! Because name is " + element.getName());
-                    } else {
-                        System.out.println("NO! Because name is " + element.getName());
-                    }
-                }
 
-                 */
+
+
+
             }
 
                 sdrData.close();
@@ -83,7 +79,7 @@ public class ImportFile {
 
         }
 
-        return null;
+        return ArrayCur;
     }
 
 }
