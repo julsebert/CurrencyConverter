@@ -6,7 +6,7 @@ package org.example;
  * <a target="_blank" href="https://www.latex-project.org">LaTeX</a> math formular support in Javadoc.</p>
  *
  */
-public class Statistics {
+public class Z_Statistics_löschen {
 
     /**
      * <p>Computing the average of a given array's values</p>

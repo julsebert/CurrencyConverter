@@ -1,11 +1,10 @@
 package org.example;
 import java.io.*;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class ImportFile {
 
-    public static B_Currencys [] importFile() {
+    public static Currencys[] importFile() {
 
         /**
          * <h1>Import SDR - Werte</h1>
@@ -16,7 +15,7 @@ public class ImportFile {
          *
          */
 
-        B_Currencys[] ArrayCur = new B_Currencys[0];
+        Currencys[] arrayCur = new Currencys[0];
 
         try {
             File getCSVFiles = new File("src/main/resources/Tabelle23final.txt");
@@ -26,60 +25,44 @@ public class ImportFile {
                 int count = 0;
                 int count2 = 0;
 
-                // Anzahl der Zeilen wird gezählt
-                while (sdrData.hasNext()) {
+
+                while (sdrData.hasNext()) {                                                 // Anzahl der Zeilen wird gezählt
                     sdrData.nextLine();
                     count++;
                 }
 
-                ArrayCur = new B_Currencys[count];
+                arrayCur = new Currencys[count];
                 sdrData = new Scanner(getCSVFiles);
 
 
                 for (int i = 0; i < count; i++) {
 
-                   // int komma = sdrData.next().indexOf(";");
                     String currentLine = sdrData.nextLine();
-                    //System.out.println(currentLine);
 
-                    // Trennung zwischen Name und SDR rausfinden
-                    int komma = currentLine.indexOf(';');
+                    int komma = currentLine.indexOf(';');                                   // Trennung zwischen Name und SDR rausfinden
 
-                    B_Currencys newCurrency = new B_Currencys();
-                    // Erstellung eines neuen Objekts der Klasse B_Currencys
+                    Currencys newCurrency = new Currencys();                            // Erstelluen eines neuen Objekts der Klasse B_Currencys
 
-                    newCurrency.setName(currentLine.substring(0, komma));
-                    // Name der Währung rausfinden
+                    newCurrency.setName(currentLine.substring(0, komma));                   // Name der Währung rausfinden
 
-                    String doubleWert = currentLine.substring(komma+1);
+                    String doubleWert = currentLine.substring(komma+1);           // String in einen double-Wert ändern
                     double zahl;
                     zahl = Double.parseDouble(doubleWert);
                     newCurrency.setSdr(zahl);
-                    // String in einen double-Wert ändern
 
-                    //System.out.println(newCurrency.getName());
-
-                    ArrayCur[count2] = newCurrency;
-                    //System.out.println("Current currency at index " + count2 + ": " + ArrayCur[count2].getName() + ArrayCur[count2].getSdr());
+                    arrayCur[count2] = newCurrency;
                     count2++;
-
-
 
                 }
 
-
-
-
-
             }
-
                 sdrData.close();
 
         } catch (IOException ioe) {
 
         }
 
-        return ArrayCur;
+        return arrayCur;
     }
 
 }

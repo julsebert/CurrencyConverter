@@ -1,6 +1,6 @@
 package org.example;
 
-public class ChoseCurrency {
+public class Z_ChoseCurrency_löschen {
     /*public
     for (B_Currencys element : finalCurrency) {
         if (element.containsString("doll")) {

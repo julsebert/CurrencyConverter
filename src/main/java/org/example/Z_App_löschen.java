@@ -10,8 +10,8 @@ import org.apache.logging.log4j.Logger;
  * and A1.log containing debugging output.
  */
 
-public class Z_App {
-    private static Logger log = LogManager.getLogger(Z_App.class);
+public class Z_App_löschen {
+    private static Logger log = LogManager.getLogger(Z_App_löschen.class);
 
     /**
      * Your application's main entry point.

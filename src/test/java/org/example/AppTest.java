@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * Sample unit test of class {@link Z_App}.
+ * Sample unit test of class {@link Z_App_löschen}.
  */
 public class AppTest {
     /**
@@ -12,6 +12,6 @@ public class AppTest {
      */
     @Test
     public void testApp() {
-        Assert.assertEquals( 33, Z_App.add(30, 3));
+        Assert.assertEquals( 33, Z_App_löschen.add(30, 3));
     }
 }
