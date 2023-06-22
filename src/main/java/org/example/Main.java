@@ -4,10 +4,24 @@ import java.util.Scanner;
 public class Main {
 
     /**
-     * import java.util.Scanner
-     * Definition sout
+     * <h1>Softwareprojekt - Currency Converter</h1> <br>
+     * <h2>Beschreibung:</h2>
+     * Ein Währungsumrechner, der mithilfe von SDR rechnet. In diesem Fall beinhaltet er 38 Währungen,
+     * die aus einer Tabelle, basierend auf imf.org Daten, eingelesen werden. Im Allgemeinen wurde flexibel und
+     * Objektorientiert gearbeitet, man kann zum Beispiel auch eine andere SDR Tabelle einfügen.
      *
-     * @param args
+     *
+     * Der User kann zwei Währungen eingeben, zwischen denen ein gewünschter Betrag umgerechnet wird.
+     * Gibt man eine Währung ein, zu der es mehrer Ergebnisse gibt, kann man über eine integrierte Suchfunktion
+     * die passende Währung auswählen. Man muss die Währungsnamen nicht komplett ausschreiben.
+     * Gibt einen negativen Wert ein, wird der gewünschte Betrag auf 0 gesetzt.
+     *
+     *
+     * <h2>Autoren:</h2>
+     * Elisabeth Götz, Matrikel-Nr. 45827 <br>
+     * Julia Ebert, Matrikel-Nr. 45877 <br>
+     * Malena Böckmann, Matrikel-Nr. 46083 <br>
+     *
      */
         public static void main(String[] args) {
 
@@ -28,15 +42,12 @@ public class Main {
         System.out.println("0: Select currency to buy");
         System.out.println("1: Select currency to sell");
         System.out.println("2: Chose amount to be converted");
-        System.out.println("Please chose an option (<<x>> to exit): ");
+        System.out.println("Please chose an option (>>x<< to exit): ");
 
 
-        /**
-         * @param userInput
-         */
+
 
         final String userInput = scan.next();
-        System.out.print(userInput);
         final Interface clear = new Interface();
 
 
@@ -135,7 +146,7 @@ public class Main {
                                 System.out.println(i + ": " + matchUserInput11[i]);
                             }
 
-                            System.out.println();   // nötig?
+                            System.out.println();
 
                             Scanner scan12 = new Scanner(System.in);
                             System.out.println("Select a currency by index: ");
@@ -164,8 +175,16 @@ public class Main {
                         final double AMOUNT = scan.nextDouble();
                         double result = status.calculationAmount(AMOUNT);
 
-                        System.out.println("Buying " + AMOUNT + " of " + status.getBuy());
-                        System.out.println("Selling " + result + " of " + status.getSell());
+                        // wir formatieren die Variablen, runden auf zwei Nachkommastellen
+                        String formattedResult = String.format("%.2f", result);
+                        String formattedAmount = String.format("%.2f", AMOUNT);
+
+
+                        //System.out.format("Buying %s of %s", formattedAmount, buyStatus);
+
+
+                        System.out.format("Buying " + formattedAmount + " of " + status.getBuy() + "\n");
+                        System.out.format("Selling " + formattedResult + " of " + status.getSell() + "\n");
                         System.out.println("++++++++++++++++++++++");
 
                         break;

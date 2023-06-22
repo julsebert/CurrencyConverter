@@ -23,9 +23,14 @@ public class Currencys {
     }
 
     public boolean containsString(String s) {                   // Wir sorgen dafür, dass es egal ist, ob die Eingabe des Nutzers
-        String nameUp = name.toUpperCase();                     // groß oder klein geschrieben ist
-        String sUp = s.toUpperCase();
-        return nameUp.contains(sUp);
+        try{
+            String nameUp = name.toUpperCase();                     // groß oder klein geschrieben ist
+            String sUp = s.toUpperCase();
+            return nameUp.contains(sUp);
+        } catch(NullPointerException ex){
+            return false;
+        }
+
 
     }
 

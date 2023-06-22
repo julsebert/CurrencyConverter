@@ -59,7 +59,7 @@ public class ImportFile {
                 sdrData.close();
 
         } catch (IOException ioe) {
-
+            System.err.println("This File is not available");
         }
 
         return arrayCur;
