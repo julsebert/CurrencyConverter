@@ -5,26 +5,16 @@ public class Interface {
     /**
      * Die Klasse Interface sorgt dafür, dass das Programm übersichtlicher wirkt und für den User lesbarer ist.
      *
-     * Methode 1 "clearConsole":
-     * Diese Methode ist dazu da, die Konsole zu "bereinigen", durch den Output mehrerer leeren Zeilen.
-     *
-     * Methode 2 "getSpace":
+     * Methode "getSpace()"
      * Diese Methode ist dazu da, dem Layout zusätzlichen Abstand zwischen den einzelnen Ausführungen zu geben.
+     * @param lines Die Anzahl an leeren Zeilen können flexibel gewählt werden.
      */
 
-    public void clearConsole(){
+    public void getSpace(int lines){
 
-            for (int i = 0; i < 50; i++) {
+            for (int i = 0; i < lines; i++) {
                 System.out.println();
             }
-
-    }
-
-    public void getSpace(){
-
-        for (int i = 0; i < 6; i++) {
-            System.out.println();
-        }
 
     }
 

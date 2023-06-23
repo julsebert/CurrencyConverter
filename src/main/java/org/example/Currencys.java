@@ -2,13 +2,18 @@ package org.example;
 
 public class Currencys {
 
+    /**
+     * Die Klasse Currencys beinhaltet zwei Parameter, welche für die Umrechnung einer Währung in eine andere von
+     * Bedeutung ist.
+     *
+     * @param name Über die Methode getName() und setName() kann der Name der Währung gesetzt und abgefragt werden.
+     * @param sdr  Über die Methode getSdr() und setSdr() kann der zugehörige SDR-Wert einer Währung abgespeichert werden.
+     */
+
     private String name = "";
     private double sdr = 0.0;
 
-    /**
-     *
-     * @param name findet den Namen für die gewünschte Währung aus dem eingelesenen File
-     */
+
     public void setName(String name){
         this.name = name;
     }       // das Array für die richtige Währung finden
@@ -17,10 +22,7 @@ public class Currencys {
         return name;
     }
 
-    /**
-     *
-     * @param sdr setzt den Wert auf die gewollte SDR Währung
-     */
+
     public void setSdr(double sdr){                             // den Wert für die gewünschte Währung finden
         this.sdr = sdr;
     }
@@ -31,15 +33,18 @@ public class Currencys {
 
     /**
      *
-     * @param s ist der userInput, dabei wird sicher gestellt, dass trotz Groß- und Kleinschreibung der richtige Currencyname gefunden wird,
-     *         indem man beide Parameter, name und s, in UPPERCASE umwandelt und dann auf ähnlichen Inhalt untersucht.
-     * @return Gibt true zurück, falls s und name die gleiche Sequenz an char values besitzen. false wird zurückgegeben,
-     *         falls es zu einer NullPointerexception kommt.
+     * @param  userInput Bei dem Parameter "userInput" handelt es sich um den, vom User, eingegebenen String in die Konsole.
+     *                   Hierbei kann die Groß- und Kleinschreibung ignoriert werden. Durch den Vergleich beider Strings muss
+     *                   der User nicht zwingend die komplette Währung ausschreiben.
+     *
+     * @return Gibt true zurück, falls der "userInput" und die Währung, die auf der Variabel "name" gespeichert ist,
+     *         die gleiche Sequenz an char values besitzen. Der Wert false wird zurückgegeben, falls es zu einer
+     *         NullPointerexception kommt.
      */
-    public boolean containsString(String s) {                   // Wir sorgen dafür, dass es egal ist, ob die Eingabe des Nutzers
+    public boolean containsString(String userInput) {                   // Wir sorgen dafür, dass es egal ist, ob die Eingabe des Nutzers
         try{
             String nameUp = name.toUpperCase();                     // groß oder klein geschrieben ist
-            String sUp = s.toUpperCase();
+            String sUp = userInput.toUpperCase();
             return nameUp.contains(sUp);
         } catch(NullPointerException ex){
             return false;

@@ -12,10 +12,12 @@ public class CurrencyCalculation {
      */
 
     public void setBuy(String buy){
-        this.buy=buy;
+
+        this.buy = buy;
     }
 
     public String getBuy(){
+
         return buy;
     }
 
@@ -25,10 +27,12 @@ public class CurrencyCalculation {
      */
 
     public void setSell(String sell){
-        this.sell=sell;
+
+        this.sell = sell;
     }
 
     public String getSell(){
+
         return sell;
     }
 
