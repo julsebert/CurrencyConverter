@@ -53,12 +53,12 @@ public class FindCurrencys {
                     return matchUserInput[userInput01];
                 } else { // Falls der User einen Index eingibt, den es nicht gibt.
                     clear.getSpace(4);
-                    System.err.println("Invalid input");
+                    System.err.println("Invalid input!");
                     return "not set";
                 }
             } else { // Falls der User einen Buchstaben eingibt.
                 clear.getSpace(4);
-                System.err.println("This input is not a number");
+                System.err.println("This input is not a number!");
                 return "not set";
             }
 
@@ -72,7 +72,7 @@ public class FindCurrencys {
             }
         } else {
             clear.getSpace(4);
-            System.err.println("Invalid input.");
+            System.err.println("Invalid input!");
             return "not set";
         }
 

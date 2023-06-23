@@ -42,6 +42,9 @@ public class CurrencyCalculation {
 
 
     public double calculationAmount(double amount) {
+
+        Interface clear = new Interface();
+
         if (amount >= 0) {
 
             Currencys[] finalCurrency = ImportFile.importFile();
@@ -49,22 +52,41 @@ public class CurrencyCalculation {
             double sdrBuy = 0.0;
             double sdrSell = 0.0;
 
-            for (Currencys element : finalCurrency) {
+            if (buy != "not set" && sell != "not set") {
+                for (Currencys element : finalCurrency) {
 
-                if (element.containsString(buy)) {
-                    sdrBuy = element.getSdr();
+                    if (element.containsString(buy)) {
+                        sdrBuy = element.getSdr();
+                    }
+                }
+
+                for (Currencys element : finalCurrency) {
+
+                    if (element.containsString(sell)) {
+                        sdrSell = element.getSdr();
+                    }
+                }
+
+                return (amount / sdrBuy) * sdrSell;
+            } else {
+
+                clear.getSpace(4);
+
+                if (buy == "not set" && sell != "not set") {
+                    System.err.println("You have to set a buy-currency!");
+                    return 0;
+                } else if (buy != "not set" && sell == "not set") {
+                    System.err.println("You have to set a sell-currency!");
+                    return 0;
+                } else {
+                    System.err.println("You have to set a buy-currency and a sell-currency!");
+                    return 0;
                 }
             }
-
-            for (Currencys element : finalCurrency) {
-
-                if (element.containsString(sell)) {
-                    sdrSell = element.getSdr();
-                }
-            }
-
-            return (amount / sdrBuy) * sdrSell;
         }
+
+        clear.getSpace(4);
+        System.err.println("You have to enter a positive amount!");
         return 0;
 
 
