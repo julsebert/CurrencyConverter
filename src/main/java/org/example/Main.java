@@ -89,9 +89,8 @@ public class Main {
                                     count02++;
                                 }
                             }
-                            System.out.println();
-                            System.out.println();
-                            System.out.println();
+
+                            clear.getSpace(); // sorgt für Abstände zwischen den einzelnen Ausführungen
 
                             System.out.println("Currency to buy: " + status.getBuy());
                             System.out.println("Currency to sell: " + status.getSell());
@@ -107,7 +106,8 @@ public class Main {
                             final int userInput01 = scan.nextInt();
 
                             status.setBuy(matchUserInput[userInput01]);
-                            System.out.println(status.getBuy());
+
+                            clear.getSpace();
 
 
                         } else {                                                                // wenn es mehrere passende Währungen gibt
@@ -115,7 +115,7 @@ public class Main {
 
                                 if (element1.containsString(userInputCur1)) {                   // Methode um Currency to Buy festzusetzen,
                                     status.setBuy(element1.getName());                          // falls es nur eine passende Währung gibt.
-                                    System.out.println(status.getBuy());
+                                    clear.getSpace();
                                 }
                             }
                         }
@@ -147,9 +147,7 @@ public class Main {
                                     count12++;
                                 }
                             }
-                            System.out.println();
-                            System.out.println();
-                            System.out.println();
+                            clear.getSpace(); // sorgt für Abstände zwischen den einzelnen Ausführungen
 
                             System.out.println("Currency to buy: " + status.getBuy());
                             System.out.println("Currency to sell: " + status.getSell());
@@ -166,14 +164,16 @@ public class Main {
                             final int userInput12 = scan.nextInt();
 
                             status.setSell(matchUserInput11[userInput12]);
-                            System.out.println(status.getSell());
+
+                            clear.getSpace();
+
 
                         } else {                                                                // wenn es mehrere passende Währungen gibt
                             for (Currencys element1 : finalCurrency) {
 
                                 if (element1.containsString(userInputCur2)) {                   // Methode um Currency to Sell festzusetzen,
                                     status.setSell(element1.getName());                         // falls es nur eine passende Währung gibt.
-                                    System.out.println(status.getSell());
+                                    clear.getSpace();
                                 }
                             }
                         }
@@ -187,6 +187,7 @@ public class Main {
                         final Scanner scan21 = new Scanner(System.in);
                         final double AMOUNT = scan.nextDouble();
                         double result = status.calculationAmount(AMOUNT);
+                        clear.getSpace();
 
                         // wir formatieren die Variablen, runden auf zwei Nachkommastellen
                         String formattedResult = String.format("%.2f", result);
