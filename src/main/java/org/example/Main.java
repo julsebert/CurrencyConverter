@@ -1,6 +1,5 @@
 package org.example;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -62,14 +61,10 @@ public class Main {
 
             switch (userInput) {
 
-                case "0" -> {
-                    status.setBuy(findCurrencys.findCurrency(userInput, scan, status));
-                }
+                case "0" -> status.setBuy(findCurrencys.findCurrency(scan, status));
 
 
-                case "1" -> {
-                    status.setSell(findCurrencys.findCurrency(userInput, scan, status));
-                }
+                case "1" -> status.setSell(findCurrencys.findCurrency(scan, status));
 
 
                 case "2" -> {

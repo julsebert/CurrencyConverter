@@ -1,4 +1,5 @@
 package org.example;
+
 import java.io.*;
 import java.util.Scanner;
 
@@ -13,7 +14,6 @@ public class ImportFile {
      * Dabei wird der Trennungspunkt zwischen dem Namen der Währung und dem SDR-Wert herausgefunden.
      * Name und Wert werden dann an dieser Stelle getrennt und in zwei neuen Variablen gespeichert,
      * welche letztendlich in den Setter Methoden "setSdr" und "setName" der Klasse Currencys dann festgelegt werden.
-     *
      */
 
     public static Currencys[] importFile() {
@@ -24,7 +24,7 @@ public class ImportFile {
             File getCSVFiles = new File("src/main/resources/Tabelle23final.txt");
             Scanner sdrData = new Scanner(getCSVFiles);
 
-            if(sdrData.hasNextLine()) {
+            if (sdrData.hasNextLine()) {
                 int count = 0;
                 int count2 = 0;
 
@@ -48,7 +48,7 @@ public class ImportFile {
 
                     newCurrency.setName(currentLine.substring(0, komma));                   // Name der Währung rausfinden
 
-                    String doubleWert = currentLine.substring(komma+1);           // String in einen double-Wert ändern
+                    String doubleWert = currentLine.substring(komma + 1);           // String in einen double-Wert ändern
                     double zahl;
                     zahl = Double.parseDouble(doubleWert);
                     newCurrency.setSdr(zahl);
@@ -59,7 +59,7 @@ public class ImportFile {
                 }
 
             }
-                sdrData.close();
+            sdrData.close();
 
         } catch (IOException ioe) {
             System.err.println("This File is not available");

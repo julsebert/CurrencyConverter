@@ -4,11 +4,10 @@ import java.util.Scanner;
 
 public class FindCurrencys {
 
-    public String findCurrency(String userInput, Scanner scan, CurrencyCalculation status) {
+    public String findCurrency(Scanner scan, CurrencyCalculation status) {
 
         Interface clear = new Interface();
-        Currencys[] finalCurrency = new Currencys[ImportFile.importFile().length];
-        finalCurrency = ImportFile.importFile();
+        Currencys[] finalCurrency = ImportFile.importFile();
 
         String currency = "";
 
@@ -55,23 +54,23 @@ public class FindCurrencys {
                 } else { // Falls der User einen Index eingibt, den es nicht gibt.
                     clear.getSpace(4);
                     System.err.println("Invalid input");
+                    return "not set";
                 }
             } else { // Falls der User einen Buchstaben eingibt.
                 clear.getSpace(4);
                 System.err.println("This input is not a number");
+                return "not set";
             }
 
 
-        } else if (count01 == 1){                                               // wenn es mehrere passende Währungen gibt
+        } else if (count01 == 1) {                                               // wenn es mehrere passende Währungen gibt
             for (Currencys element1 : finalCurrency) {
 
                 if (element1.containsString(userInputCur1)) {                   // Methode um Currency to Buy festzusetzen,
                     return element1.getName();
                 }
             }
-        }
-
-        else {
+        } else {
             clear.getSpace(4);
             System.err.println("Invalid input.");
             return "not set";
