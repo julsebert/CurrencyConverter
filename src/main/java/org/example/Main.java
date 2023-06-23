@@ -25,8 +25,6 @@ public class Main {
 
         ImportFile.importFile();
         CurrencyCalculation status = new CurrencyCalculation();
-        Currencys[] finalCurrency = new Currencys[ImportFile.importFile().length];
-        finalCurrency = ImportFile.importFile();
 
         boolean condition = true;
 
