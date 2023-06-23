@@ -52,7 +52,7 @@ public class CurrencyCalculation {
             double sdrBuy = 0.0;
             double sdrSell = 0.0;
 
-            if (buy != "not set" && sell != "not set") {
+            if (!buy.equals("not set") && !sell.equals("not set")) {
                 for (Currencys element : finalCurrency) {
 
                     if (element.containsString(buy)) {
@@ -72,10 +72,10 @@ public class CurrencyCalculation {
 
                 clear.getSpace(4);
 
-                if (buy == "not set" && sell != "not set") {
+                if (buy.equals("not set") && !sell.equals("not set")) {
                     System.err.println("You have to set a buy-currency!");
                     return 0;
-                } else if (buy != "not set" && sell == "not set") {
+                } else if (!buy.equals("not set") && sell.equals("not set")) {
                     System.err.println("You have to set a sell-currency!");
                     return 0;
                 } else {
