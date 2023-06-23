@@ -3,26 +3,26 @@ import java.util.Scanner;
 
 public class Main {
 
-    /**
-     * <h1>Softwareprojekt - Currency Converter</h1> <br>
-     * <h2>Beschreibung:</h2>
-     * Ein Währungsumrechner, der mithilfe von SDR rechnet. In diesem Fall beinhaltet er 38 Währungen,
-     * die aus einer Tabelle, basierend auf imf.org Daten, eingelesen werden. Im Allgemeinen wurde flexibel und
-     * Objektorientiert gearbeitet, man kann zum Beispiel auch eine andere SDR Tabelle einfügen.
-     *
-     *
-     * Der User kann zwei Währungen eingeben, zwischen denen ein gewünschter Betrag umgerechnet wird.
-     * Gibt man eine Währung ein, zu der es mehrer Ergebnisse gibt, kann man über eine integrierte Suchfunktion
-     * die passende Währung auswählen. Man muss die Währungsnamen nicht komplett ausschreiben.
-     * Gibt einen negativen Wert ein, wird der gewünschte Betrag auf 0 gesetzt.
-     *
-     *
-     * <h2>Autoren:</h2>
-     * Elisabeth Götz, Matrikel-Nr. 45827 <br>
-     * Julia Ebert, Matrikel-Nr. 45877 <br>
-     * Malena Böckmann, Matrikel-Nr. 46083 <br>
-     *
-     */
+        /**
+         * <h1>Softwareprojekt - Currency Converter</h1> <br>
+         * <h2>Beschreibung:</h2>
+         * Ein Währungsumrechner, der mithilfe von SDR rechnet. In diesem Fall beinhaltet er 38 Währungen,
+         * die aus einer Tabelle, basierend auf imf.org Daten, eingelesen werden. Im Allgemeinen wurde flexibel und
+         * objektorientiert gearbeitet, man kann zum Beispiel auch eine andere SDR Tabelle einfügen.
+         *
+         *
+         * Der User kann zwei Währungen eingeben, zwischen denen ein gewünschter Betrag umgerechnet wird.
+         * Gibt man eine Währung ein, zu der es mehrer Ergebnisse gibt, kann man über eine integrierte Suchfunktion
+         * die passende Währung auswählen. Man muss die Währungsnamen nicht komplett ausschreiben.
+         * Gibt einen negativen Wert ein, wird der gewünschte Betrag auf 0 gesetzt.
+         *
+         *
+         * <h2>Autoren:</h2>
+         * Elisabeth Götz, Matrikel-Nr. 45827 <br>
+         * Julia Ebert, Matrikel-Nr. 45877 <br>
+         * Malena Böckmann, Matrikel-Nr. 46083 <br>
+         *
+         */
         public static void main(String[] args) {
 
         ImportFile.importFile();
@@ -51,7 +51,20 @@ public class Main {
         final Interface clear = new Interface();
 
 
-                switch (userInput) {
+        /**
+         * Mit einer switch case Methode legen wir den Output für die Optionen des Users fest.<br>
+         * case "0": gibt dem User die Option eine Währung auszuwählen, die umgerechnet werden soll.
+         * Dabei hat er freie Eingabewahl.
+         * Je nachdem, wie viele Währungen der Eingabe ähneln, wird dem User eine nummerierte Liste dargeboten,
+         * indem er sich für seine finale Option entscheidet.<br>
+         * case "1": bietet dem User, durch dasselbe Verfahren die Auswahl für die Ausgabewährung. <br>
+         * case "2": ermöglicht dem User letztendlich, den Wert festzulegen, der umgerechnet werden soll und gibt das Ergebnis aus.
+         * Dabei werden die Zahlen auf zwei Nachkommastellen gekürzt.<br>
+         * der default case leert letztendlich die Konsole und stoppt die Eingabe.
+         */
+
+
+            switch (userInput) {
 
 
                     case "0":

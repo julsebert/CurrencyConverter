@@ -36,7 +36,8 @@ public class CurrencyCalculation {
      *
      * @param amount    Der User gibt über die Konsole einen Betrag ein, der über folgende Methode umgerechnet wird.
      *                  Die gesetzte buy-Währung wird mithilfe von SDR in die angefragte sell-Währung umgerechnet.
-     * @return          Gibt den umgerechneten Betrag zurück.
+     * @return          Gibt den umgerechneten Betrag zurück. Wenn der über die Konsole eingetragene Betrag negativ ist,
+     *                  wird 0 ausgegeben, da keine negativen Werte möglich sind.
      */
 
 
