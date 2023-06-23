@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public class ImportFile {
 
-    public static Currencys[] importFile() {
-
     /**
      * <h1>Import SDR - Werte</h1>
      * Um den Betrag leichter in eine andere Währung umzurechnen arbeiten wir mit dem sog. SDR, kurz für
@@ -17,6 +15,8 @@ public class ImportFile {
      * welche letztendlich in den Setter Methoden "setSdr" und "setName" der Klasse Currencys dann festgelegt werden.
      *
      */
+
+    public static Currencys[] importFile() {
 
         Currencys[] arrayCur = new Currencys[0];
 
