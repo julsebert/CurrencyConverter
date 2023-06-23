@@ -43,7 +43,7 @@ public class Main {
             final String userInput = scan.next();
             final Interface clear = new Interface();
 
-            FindCurrencys findCurrencys = new FindCurrencys();
+            FindCurrency findCurrencys = new FindCurrency();
 
 
         /*

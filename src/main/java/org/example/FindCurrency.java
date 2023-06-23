@@ -2,12 +2,12 @@ package org.example;
 
 import java.util.Scanner;
 
-public class FindCurrencys {
+public class FindCurrency {
 
     public String findCurrency(Scanner scan, CurrencyCalculation status) {
 
         Interface clear = new Interface();
-        Currencys[] finalCurrency = ImportFile.importFile();
+        Currency[] finalCurrency = ImportFile.importFile();
 
         String currency = "";
 
@@ -16,7 +16,7 @@ public class FindCurrencys {
         final String userInputCur1 = scan.next();
 
         int count01 = 0;
-        for (Currencys element : finalCurrency) {
+        for (Currency element : finalCurrency) {
             if (element.containsString(userInputCur1))
                 count01++;                                                      // Wir schauen, auf wie viele Währungen die Eingabe passt
         }
@@ -25,7 +25,7 @@ public class FindCurrencys {
         String[] matchUserInput = new String[count01];
 
         if (count01 > 1) {                                                      // Wir erstellen neues Array, um dem
-            for (Currencys element1 : finalCurrency) {
+            for (Currency element1 : finalCurrency) {
                 if (element1.containsString(userInputCur1)) {                   // Nutzer die Optionen zu zeigen,
                     matchUserInput[count02] = element1.getName();
                     count02++;
@@ -64,7 +64,7 @@ public class FindCurrencys {
 
 
         } else if (count01 == 1) {                                               // wenn es mehrere passende Währungen gibt
-            for (Currencys element1 : finalCurrency) {
+            for (Currency element1 : finalCurrency) {
 
                 if (element1.containsString(userInputCur1)) {                   // Methode um Currency to Buy festzusetzen,
                     return element1.getName();

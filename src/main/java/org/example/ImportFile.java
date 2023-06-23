@@ -16,9 +16,9 @@ public class ImportFile {
      * welche letztendlich in den Setter Methoden "setSdr" und "setName" der Klasse Currencys dann festgelegt werden.
      */
 
-    public static Currencys[] importFile() {
+    public static Currency[] importFile() {
 
-        Currencys[] arrayCur = new Currencys[0];
+        Currency[] arrayCur = new Currency[0];
 
         try {
             File getCSVFiles = new File("src/main/resources/Tabelle23final.txt");
@@ -34,7 +34,7 @@ public class ImportFile {
                     count++;
                 }
 
-                arrayCur = new Currencys[count];
+                arrayCur = new Currency[count];
                 sdrData = new Scanner(getCSVFiles);
 
 
@@ -44,7 +44,7 @@ public class ImportFile {
 
                     int komma = currentLine.indexOf(';');                                   // Trennung zwischen Name und SDR rausfinden
 
-                    Currencys newCurrency = new Currencys();                            // Erstellung eines neuen Objekts der Klasse Currencys
+                    Currency newCurrency = new Currency();                            // Erstellung eines neuen Objekts der Klasse Currencys
 
                     newCurrency.setName(currentLine.substring(0, komma));                   // Name der Währung rausfinden
 

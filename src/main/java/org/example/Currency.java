@@ -1,6 +1,6 @@
 package org.example;
 
-public class Currencys {
+public class Currency {
 
     /**
      * Die Klasse Currencys beinhaltet zwei Parameter, welche für die Umrechnung einer Währung in eine andere von

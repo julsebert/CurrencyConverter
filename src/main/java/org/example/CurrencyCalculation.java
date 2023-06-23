@@ -47,20 +47,20 @@ public class CurrencyCalculation {
 
         if (amount >= 0) {
 
-            Currencys[] finalCurrency = ImportFile.importFile();
+            Currency[] finalCurrency = ImportFile.importFile();
 
             double sdrBuy = 0.0;
             double sdrSell = 0.0;
 
             if (!buy.equals("not set") && !sell.equals("not set")) {
-                for (Currencys element : finalCurrency) {
+                for (Currency element : finalCurrency) {
 
                     if (element.containsString(buy)) {
                         sdrBuy = element.getSdr();
                     }
                 }
 
-                for (Currencys element : finalCurrency) {
+                for (Currency element : finalCurrency) {
 
                     if (element.containsString(sell)) {
                         sdrSell = element.getSdr();
@@ -68,6 +68,7 @@ public class CurrencyCalculation {
                 }
 
                 return (amount / sdrBuy) * sdrSell;
+
             } else {
 
                 clear.getSpace(4);
