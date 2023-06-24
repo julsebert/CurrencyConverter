@@ -49,7 +49,7 @@ public class FindCurrency {
             if (scan.hasNextInt()) {
                 final int userInput01 = scan.nextInt();
 
-                if (userInput01 > 0 && userInput01 <= matchUserInput.length - 1) {
+                if (userInput01 >= 0 && userInput01 <= matchUserInput.length - 1) {
                     return matchUserInput[userInput01];
                 } else { // Falls der User einen Index eingibt, den es nicht gibt.
                     clear.getSpace(4);
