@@ -7,6 +7,7 @@ Der SDR-Währungsumrechner ist benutzerfreundlich und intuitiv gestaltet. Durch 
 # How to use
 
 Das Programm startet mit einem Menü welches folgenden Optionen zur Auswahl stellt: 
+      
       0: Select currency to buy
       1: Select currency to sell
       2: Choose amount to be converted
