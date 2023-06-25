@@ -50,20 +50,23 @@ public class FindCurrency {
                 final int userInput01 = scan.nextInt();
 
                 if (userInput01 >= 0 && userInput01 <= matchUserInput.length - 1) {
+                    clear.getSpace(4);
                     return matchUserInput[userInput01];
                 } else { // Falls der User einen Index eingibt, den es nicht gibt.
                     clear.getSpace(4);
-                    System.err.println("Invalid input!");
+                    System.err.println("Invalid input.");
                     return "not set";
                 }
             } else { // Falls der User einen Buchstaben eingibt.
                 clear.getSpace(4);
-                System.err.println("This input is not a number!");
+                System.err.println("This input is not a number.");
                 return "not set";
             }
 
 
         } else if (count01 == 1) {                                               // wenn es mehrere passende Währungen gibt
+
+            clear.getSpace(4);
             for (Currency element1 : finalCurrency) {
 
                 if (element1.containsString(userInputCur1)) {                   // Methode um Currency to Buy festzusetzen,
@@ -72,7 +75,7 @@ public class FindCurrency {
             }
         } else {
             clear.getSpace(4);
-            System.err.println("Invalid input!");
+            System.err.println("Invalid input.");
             return "not set";
         }
 

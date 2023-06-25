@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -69,9 +70,20 @@ public class Main {
 
                 case "2" -> {
                     System.out.println("Enter an amount: ");
-                    final double AMOUNT = scan.nextDouble();
-                    double result = status.calculationAmount(AMOUNT);
-                    clear.getSpace(6);
+
+                    double result = 0.;
+                    double AMOUNT = 0.;
+
+                    if (scan.hasNextDouble()) {
+                        AMOUNT = scan.nextDouble();
+
+                        result = status.calculationAmount(AMOUNT);
+                        clear.getSpace(6);
+                    } else {
+                        clear.getSpace(4);
+                        System.err.println("Please enter a possible amount.");
+                    }
+
 
                     // wir formatieren die Variablen, runden auf zwei Nachkommastellen
                     String formattedResult = String.format("%.2f", result);
@@ -85,16 +97,23 @@ public class Main {
                     System.out.format("Selling " + formattedResult + " of " + status.getSell() + "\n");
                     System.out.println("++++++++++++++++++++++");
                 }
-                default -> {
+
+                case "x" -> {
                     clear.getSpace(50);
                     condition = false;
                 }
-            }
 
+                default -> {
+                    clear.getSpace(4);
+                    System.err.println("You have to choose a correct option!");
+                }
+            }
         }
 
     }
 
 }
+
+
 
 
