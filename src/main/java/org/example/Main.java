@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Main {
 
     /**
-     * <h1>Softwareprojekt - Currency Converter</h1> <br>
-     * <h2>Beschreibung:</h2>
+     * Softwareprojekt - Currency Converter
+     * Beschreibung:
      * Ein Währungsumrechner, der mithilfe von SDR rechnet. In diesem Fall beinhaltet er 38 Währungen,
      * die aus einer Tabelle, basierend auf imf.org Daten, eingelesen werden. Im Allgemeinen wurde flexibel und
      * objektorientiert gearbeitet, man kann zum Beispiel auch eine andere SDR Tabelle einfügen.*
@@ -14,11 +14,6 @@ public class Main {
      * Gibt man eine Währung ein, zu der es mehrere Ergebnisse gibt, kann man über eine integrierte Suchfunktion
      * die passende Währung auswählen. Man muss die Währungsnamen nicht komplett ausschreiben.
      * Gibt einen negativen Wert ein, wird der gewünschte Betrag auf 0 gesetzt.
-     *
-     * <h2>Autoren:</h2>
-     * Elisabeth Götz, Matrikel-Nr. 45827 <br>
-     * Julia Ebert, Matrikel-Nr. 45877 <br>
-     * Malena Böckmann, Matrikel-Nr. 46083 <br>
      */
     public static void main(String[] args) {
 

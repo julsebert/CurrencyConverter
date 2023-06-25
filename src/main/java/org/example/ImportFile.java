@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class ImportFile {
 
     /**
-     * <h1>Import SDR - Werte</h1>
+     * Import SDR - Werte
      * Um den Betrag leichter in eine andere Währung umzurechnen arbeiten wir mit dem sog. SDR, kurz für
      * Sonderziehungsrechte (Special Drawing Rights). Es handelt sich hier nicht um eine eigenständige Währung,
      * sondern um eine Art Recheneinheit.
