@@ -1,5 +1,11 @@
 # Currency Converter
 
+Der SDR-Währungsumrechner ist ein praktisches Tool, das es ermöglicht, den Wert verschiedener Währungen in Bezug auf den Sonderziehungsrechtskorb (SDR) zu berechnen. SDR ist eine internationale Reservewährung, die vom Internationalen Währungsfonds (IWF) verwendet wird und aus einem Korb von wichtigen Währungen besteht. Mit diesem Währungsumrechner können Benutzer den aktuellen Wechselkurs zwischen SDR und anderen Währungen ermitteln, was ihnen ermöglicht, den Wert ihres Geldes in SDR oder umgekehrt zu verstehen.
+Der SDR-Währungsumrechner ist benutzerfreundlich und intuitiv gestaltet. Durch die Angabe einer Eingangswährung und einer Ausgangswährung kann das Tool einen bestimmten Betrag in die ausgewählte Ausgangswährung umrechnen.
+
+# How to use: 
+
+
 
 
 
