@@ -75,7 +75,7 @@ public class CurrencyCalculation {
                     clear.getSpace(4);
                     System.err.println("You have to set a buy-currency!");
                     return 0;
-                } else if (!buy.equals("not set") && sell.equals("not set")) {
+                } else if (!buy.equals("not set")) {
                     clear.getSpace(4);
                     System.err.println("You have to set a sell-currency!");
                     return 0;
