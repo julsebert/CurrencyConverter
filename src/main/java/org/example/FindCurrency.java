@@ -4,6 +4,13 @@ import java.util.Scanner;
 
 public class FindCurrency {
 
+    /**
+     *
+     * @param scan Der Scanner wird übergeben.
+     * @param status Die Variabel "status" übergibt alle wichtigen Informationen über die gesetzten Währungen.
+     * @return Die passende Währung wird zurückgegeben.
+     */
+
     public String findCurrency(Scanner scan, CurrencyCalculation status) {
 
         Interface clear = new Interface();

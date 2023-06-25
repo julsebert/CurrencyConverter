@@ -6,7 +6,7 @@ public class CurrencyCalculation {
     String sell = "not set";
 
     /**
-     * @param buy Währung die umgerechnet werden soll.
+     * @param buy Währung die umgerechnet werden soll, kann mit der Methode setBuy() gesetzt werden.
      */
 
     public void setBuy(String buy) {
@@ -14,19 +14,29 @@ public class CurrencyCalculation {
         this.buy = buy;
     }
 
+    /**
+     *
+     * @return Mit der Methode getBuy() kann die Währung ausgegeben werden, die auf buy gesetzt wurde.
+     */
+
     public String getBuy() {
 
         return buy;
     }
 
     /**
-     * @param sell Währung, in die umgerechnet und ausgegeben werden soll.
+     * @param sell Währung, in die umgerechnet und ausgegeben werden soll, kann mit der Methode setSell() gesetzt werden.
      */
 
     public void setSell(String sell) {
 
         this.sell = sell;
     }
+
+    /**
+     *
+     * @return Mit der Methode getSell() kann die Währung ausgegeben werden, die auf sell gesetzt wurde.
+     */
 
     public String getSell() {
 
