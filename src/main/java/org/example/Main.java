@@ -17,7 +17,8 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        ImportFile.importFile();
+        ImportFile importFile = new ImportFile();
+        importFile.importFile();
         CurrencyCalculation status = new CurrencyCalculation();
 
         boolean condition = true;

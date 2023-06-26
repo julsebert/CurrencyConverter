@@ -58,7 +58,8 @@ public class CurrencyCalculation {
 
         if (amount >= 0) {
 
-            Currency[] finalCurrency = ImportFile.importFile();
+            ImportFile importFile = new ImportFile();
+            Currency[] finalCurrency = importFile.importFile();
 
             double sdrBuy = 0.0;
             double sdrSell = 0.0;

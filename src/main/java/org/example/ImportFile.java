@@ -16,13 +16,13 @@ public class ImportFile {
      * welche letztendlich in den Setter Methoden "setSdr" und "setName" der Klasse Currencys dann festgelegt werden.
      */
 
-    public static Currency[] importFile() {
+    public Currency[] importFile() {
 
         Currency[] arrayCur = new Currency[0];
 
         try {
-            File getCSVFiles = new File("src/main/resources/Tabelle23final.txt");
-            Scanner sdrData = new Scanner(getCSVFiles);
+            // File getCSVFiles = new File("src/main/resources/Tabelle23final.txt");
+            Scanner sdrData = new Scanner(new InputStreamReader(getClass().getResourceAsStream("/Tabelle23final.txt")));
 
             if (sdrData.hasNextLine()) {
                 int count = 0;
@@ -35,7 +35,7 @@ public class ImportFile {
                 }
 
                 arrayCur = new Currency[count];
-                sdrData = new Scanner(getCSVFiles);
+                sdrData = new Scanner(new InputStreamReader(getClass().getResourceAsStream("/Tabelle23final.txt")));
 
 
                 for (int i = 0; i < count; i++) {
@@ -61,7 +61,7 @@ public class ImportFile {
             }
             sdrData.close();
 
-        } catch (IOException ioe) {
+        } catch (Exception e) {
             System.err.println("This File is not available");
         }
 

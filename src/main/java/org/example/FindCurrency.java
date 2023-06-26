@@ -14,7 +14,8 @@ public class FindCurrency {
     public String findCurrency(Scanner scan, CurrencyCalculation status) {
 
         Interface clear = new Interface();
-        Currency[] finalCurrency = ImportFile.importFile();
+        ImportFile importFile = new ImportFile();
+        Currency[] finalCurrency = importFile.importFile();
 
         String currency = "";
 
